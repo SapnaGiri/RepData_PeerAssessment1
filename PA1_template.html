@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title></title>
+<title>Literate Statistical Programming - R Markdown</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,13 +201,13 @@ hr {
 </head>
 
 <body>
-<p>##Literate Statistical Programming - R Markdown</p>
+<h2>Literate Statistical Programming - R Markdown</h2>
 
 <h1></h1>
 
-<p>###Loading required packages</p>
+<h3>Loading required packages</h3>
 
-<p>###Loading and preprocessing the data</p>
+<h3>Loading and preprocessing the data</h3>
 
 <pre><code class="r">data &lt;- read.csv(&quot;Activity.csv&quot;)
 data$date &lt;- as.POSIXct(data$date)
@@ -223,8 +223,9 @@ head(data)
 ## 6    NA 2012-10-01       25
 </code></pre>
 
-<p>###What is mean total number of steps taken per day?
-For this part of the assignment, you can ignore the missing values in the dataset.</p>
+<h3>What is mean total number of steps taken per day?</h3>
+
+<p>For this part of the assignment, you can ignore the missing values in the dataset.</p>
 
 <ol>
 <li>Calculate the total number of steps taken per day</li>
@@ -254,8 +255,11 @@ Median1 &lt;- as.character(summarystepsperday[[&quot;Median&quot;]])
 <p><strong>Mean steps per day : 10770</strong><br/>
 <strong>Median of steps per day : 10760</strong></p>
 
-<p>###What is the average daily activity pattern?
-1. Make a time series plot (i.e. 𝚝𝚢𝚙𝚎 = &ldquo;𝚕&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</p>
+<h3>What is the average daily activity pattern?</h3>
+
+<ol>
+<li>Make a time series plot (i.e. 𝚝𝚢𝚙𝚎 = &ldquo;𝚕&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</li>
+</ol>
 
 <pre><code class="r">averagestepsperinterval &lt;- aggregate(steps ~ interval, data=data, mean, na.rm=T)
 
@@ -298,8 +302,9 @@ head(averagestepsperinterval,15)
 <pre><code>## [1] 835
 </code></pre>
 
-<p>###Imputing missing values
-Note that there are a number of days/intervals where there are missing values (coded as 𝙽𝙰). The presence of missing days may introduce bias into some calculations or summaries of the data.</p>
+<h3>Imputing missing values</h3>
+
+<p>Note that there are a number of days/intervals where there are missing values (coded as 𝙽𝙰). The presence of missing days may introduce bias into some calculations or summaries of the data.</p>
 
 <ol>
 <li>Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with 𝙽𝙰s)</li>
@@ -386,8 +391,9 @@ Median2 &lt;- as.character(imputedsummary[[&quot;Median&quot;]])
 <p><strong>Before Imputing, Mean = 10770 and Median = 10760.</strong><br/>
 <strong>After Imputing, Mean = 10770 and Median = 10770.</strong>  </p>
 
-<p>###Are there differences in activity patterns between weekdays and weekends?
-For this part the 𝚠𝚎𝚎𝚔𝚍𝚊𝚢𝚜() function may be of some help here. Use the dataset with the filled-in missing values for this part.</p>
+<h3>Are there differences in activity patterns between weekdays and weekends?</h3>
+
+<p>For this part the 𝚠𝚎𝚎𝚔𝚍𝚊𝚢𝚜() function may be of some help here. Use the dataset with the filled-in missing values for this part.</p>
 
 <ol>
 <li>Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</li>

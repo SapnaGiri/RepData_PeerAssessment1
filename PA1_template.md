@@ -1,14 +1,14 @@
-##Literate Statistical Programming - R Markdown
+## Literate Statistical Programming - R Markdown
 
 =============================================================
 
 
 
-###Loading required packages
+### Loading required packages
 
 
 
-###Loading and preprocessing the data
+### Loading and preprocessing the data
 
 ```r
 data <- read.csv("Activity.csv")
@@ -26,7 +26,7 @@ head(data)
 ## 6    NA 2012-10-01       25
 ```
 
-###What is mean total number of steps taken per day?
+### What is mean total number of steps taken per day?
 For this part of the assignment, you can ignore the missing values in the dataset.
 
 1. Calculate the total number of steps taken per day
@@ -62,7 +62,7 @@ Median1 <- as.character(summarystepsperday[["Median"]])
 
 
 
-###What is the average daily activity pattern?
+### What is the average daily activity pattern?
 1. Make a time series plot (i.e. 𝚝𝚢𝚙𝚎 = "𝚕") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 
@@ -113,7 +113,7 @@ averagestepsperinterval[averagestepsperinterval$steps == max(averagestepsperinte
 
 
 
-###Imputing missing values
+### Imputing missing values
 Note that there are a number of days/intervals where there are missing values (coded as 𝙽𝙰). The presence of missing days may introduce bias into some calculations or summaries of the data.
 
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with 𝙽𝙰s)
@@ -209,7 +209,7 @@ Median2 <- as.character(imputedsummary[["Median"]])
 **After Imputing, Mean = 10770 and Median = 10770.**  
   
   
-###Are there differences in activity patterns between weekdays and weekends?
+### Are there differences in activity patterns between weekdays and weekends?
 For this part the 𝚠𝚎𝚎𝚔𝚍𝚊𝚢𝚜() function may be of some help here. Use the dataset with the filled-in missing values for this part.
 
 1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.

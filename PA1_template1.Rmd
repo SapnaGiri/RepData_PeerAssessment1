@@ -1,4 +1,4 @@
-##Literate Statistical Programming - R Markdown
+## Literate Statistical Programming - R Markdown
 
 =============================================================
 
@@ -6,7 +6,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-###Loading required packages
+### Loading required packages
 ```{r echo=FALSE, results="hide"}
 library(dplyr)
 library(ggplot2)
